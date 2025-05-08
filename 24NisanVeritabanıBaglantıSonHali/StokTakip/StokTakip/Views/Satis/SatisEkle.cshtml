@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "SatisEkle";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>SatisEkle</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Ürün</label>
+        <input type="text" class="form-control" name="URUN" />
+
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Müşteri</label>
+        <input type="text" class="form-control" name="MUSTERI" />
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TARİH</label>
+        <input type="text" class="form-control" name="TARİH" />
+
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Satış   Ekle</button>
+</form>

@@ -1,0 +1,33 @@
+﻿@using StokTakip.Models.StokModel
+@model IList<KATEGORI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>Kategori Sayfasındasınız</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Kategori No</td>
+            <td>Kategori AD</td>
+    
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kayit in Model)
+        {
+            <tr>
+                <td>@kayit.KATEGORID</td>
+                <td>@kayit.KATEGORIAD</td>
+              
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+<a href="/Kategori/KategoriEkle/" class="btn btn-success">Yeni Kayıt</a>

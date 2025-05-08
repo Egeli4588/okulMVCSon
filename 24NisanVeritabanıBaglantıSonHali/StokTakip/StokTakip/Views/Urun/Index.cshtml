@@ -1,0 +1,39 @@
+﻿@using StokTakip.Models.StokModel
+@model IList<URUNLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>Urun sayfasasındasınız</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Ürün No</td>
+            <td>Ürün Marka</td>
+            <td>Ürün Adı</td>
+            <td>Ürün Kategori</td>
+            <td>Ürün Fiyat</td>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kayit in Model)
+        {
+            <tr>
+                <td>@kayit.URUNID</td>
+                <td>@kayit.MARKA</td>
+                <td>@kayit.URUNAD</td>
+                <td>@kayit.KATEGORI</td>
+                <td>@kayit.FIYAT</td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+<a href="/Urun/UrunEkle/" class="btn btn-success">Yeni Ürün</a>
+
+

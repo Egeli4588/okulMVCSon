@@ -1,0 +1,38 @@
+﻿@using StokTakip.Models.StokModel;
+@model IList<MUSTERILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>Müşteri sayfasındasınız</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Müşteri No</td>
+            <td>Müşteri Adı</td>
+            <td>Müşteri Soyadı</td>
+            <td>Müşteri Telefon</td>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kayit in Model)
+        {
+            <tr>
+                <td>@kayit.MUSTERID</td>
+                <td>@kayit.MUSTERIAD</td>
+                <td>@kayit.MUSTERISOYAD</td>
+                <td>@kayit.MUSTERITELEFON</td>
+
+            </tr>
+
+        }
+
+    </tbody>
+   
+</table>
+
+<a href="/Musteri/MusteriEkle/" class="btn btn-success">Yeni Kayıt</a>
