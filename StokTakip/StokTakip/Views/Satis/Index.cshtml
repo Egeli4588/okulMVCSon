@@ -1,0 +1,40 @@
+﻿@using StokTakip.Models.StokModel
+@model IList<SATISLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>Satış sayfasındasınız</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Satış No</td>
+            <td>Ürün </td>
+            <td>Müşteri</td>
+            <td>Tarih</td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kayit in Model)
+        {
+            <tr>
+                <td>@kayit.SATISID</td>
+                <td>@kayit.URUN</td>
+                <td>@kayit.MUSTERI</td>
+                <td>@kayit.TARİH</td>
+
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+
+<a href="/Satis/SatisEkle/" class="btn btn-success">Yeni Kayıt</a>

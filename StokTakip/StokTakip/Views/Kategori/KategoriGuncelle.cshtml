@@ -1,0 +1,15 @@
+﻿@model StokTakip.Models.StokModel.KATEGORI
+@{
+    ViewBag.Title = "KategoriGuncelle";
+    Layout = "~/Views/Home/Layout/Layout.cshtml";
+}
+
+<h2>Kategori Guncelleme Sayfası</h2>
+
+@using (Html.BeginForm("Guncelle", "Kategori", FormMethod.Post))
+{
+    <label>İd</label>@Html.TextBoxFor(m => m.KATEGORID, new { @class = "form-control" })
+    <label>KategoriAd</label>@Html.TextBoxFor(m => m.KATEGORIAD, new { @class = "form-control" })
+
+    <button class="btn btn-success">Kaydı Güncelle</button>
+}
